@@ -42,3 +42,20 @@ docker run --rm -v "$PWD/scripts:/scripts" grafana/k6 run /scripts/smoke.js
 
 ## Verified
 `smoke.js`, `load.js` (reduced) and `spike.js` (reduced) were run locally with k6 v2.4.0 - all checks passed and no threshold was crossed. `stress.js` and the full-length `soak.js` were not executed in full.
+
+## Test cases
+Every threshold of every scenario is a documented test case (ID as a comment next to the threshold), in the standard of [docs/TEST_CASE_STANDARD.md](docs/TEST_CASE_STANDARD.md) (strategy: not written yet for this repo).
+
+| Module | Document | Cases |
+|--------|----------|-------|
+| Smoke | [smoke.md](docs/test-cases/smoke.md) | 3 |
+| Load | [load.md](docs/test-cases/load.md) | 4 |
+| Stress | [stress.md](docs/test-cases/stress.md) | 2 |
+| Spike | [spike.md](docs/test-cases/spike.md) | 2 |
+| Soak | [soak.md](docs/test-cases/soak.md) | 2 |
+| **Total** | | **13** |
+
+`node tools/docs.js csv` regenerates the master CSVs, `node tools/docs.js check` is the traceability check.
+
+## Reports
+`K6=<path to k6> node tools/run-k6.js` runs every scenario with a SHORT, polite profile (see the Test data column of each document) and writes module-wise reports to `reports/` (`index.html`, `history.json`, one folder per scenario). The committed report is a real run of that short profile; the soak report is only a 20 s smoke of the soak script, not a real 30 minute soak. Open [reports/index.html](reports/index.html) after cloning.
