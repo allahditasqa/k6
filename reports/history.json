@@ -1,5 +1,62 @@
 [
   {
+    "RunId": "20261118-142612",
+    "StartedAt": "2026-11-18T09:26:12.396Z",
+    "DurationSeconds": 162.4,
+    "Modules": [
+      {
+        "Module": "Smoke",
+        "ReportPath": "smoke/Smoke test 18-11-2026_14-26-12.html",
+        "CsvPath": "smoke/Smoke test cases 18-11-2026_14-26-12.csv",
+        "Total": 3,
+        "Passed": 3,
+        "Failed": 0,
+        "Skipped": 0,
+        "DurationSeconds": 12.4
+      },
+      {
+        "Module": "Load",
+        "ReportPath": "load/Load test 18-11-2026_14-26-12.html",
+        "CsvPath": "load/Load test cases 18-11-2026_14-26-12.csv",
+        "Total": 4,
+        "Passed": 4,
+        "Failed": 0,
+        "Skipped": 0,
+        "DurationSeconds": 26.3
+      },
+      {
+        "Module": "Stress",
+        "ReportPath": "stress/Stress test 18-11-2026_14-26-12.html",
+        "CsvPath": "stress/Stress test cases 18-11-2026_14-26-12.csv",
+        "Total": 2,
+        "Passed": 2,
+        "Failed": 0,
+        "Skipped": 0,
+        "DurationSeconds": 41.4
+      },
+      {
+        "Module": "Spike",
+        "ReportPath": "spike/Spike test 18-11-2026_14-26-12.html",
+        "CsvPath": "spike/Spike test cases 18-11-2026_14-26-12.csv",
+        "Total": 2,
+        "Passed": 2,
+        "Failed": 0,
+        "Skipped": 0,
+        "DurationSeconds": 47.9
+      },
+      {
+        "Module": "Soak",
+        "ReportPath": "soak/Soak test 18-11-2026_14-26-12.html",
+        "CsvPath": "soak/Soak test cases 18-11-2026_14-26-12.csv",
+        "Total": 2,
+        "Passed": 2,
+        "Failed": 0,
+        "Skipped": 0,
+        "DurationSeconds": 32.3
+      }
+    ]
+  },
+  {
     "RunId": "20261118-124143",
     "StartedAt": "2026-11-18T07:41:43.958Z",
     "DurationSeconds": 159,

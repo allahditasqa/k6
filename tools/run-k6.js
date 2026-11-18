@@ -46,7 +46,7 @@ let k6Version = 'k6';
 for (const scenario of scenarios) {
   const { module, env } = PROFILES[scenario];
   const summaryFile = path.join(tmp, `${scenario}.json`);
-  const args = ['run', '-q', '--summary-export', summaryFile, ...Object.entries(env).flatMap(([k, v]) => ['-e', `${k}=${v}`]), `scripts/${scenario}.js`];
+  const args = ['run', '-q', '--summary-trend-stats', 'min,avg,med,max,p(90),p(95),p(99)', '--summary-export', summaryFile, ...Object.entries(env).flatMap(([k, v]) => ['-e', `${k}=${v}`]), `scripts/${scenario}.js`];
   const t0 = Date.now();
   const run = spawnSync(K6, args, { cwd: ROOT, encoding: 'utf8' });
   const seconds = (Date.now() - t0) / 1000;
