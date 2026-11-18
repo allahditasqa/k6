@@ -44,7 +44,7 @@ docker run --rm -v "$PWD/scripts:/scripts" grafana/k6 run /scripts/smoke.js
 `smoke.js`, `load.js` (reduced) and `spike.js` (reduced) were run locally with k6 v2.4.0 - all checks passed and no threshold was crossed. `stress.js` and the full-length `soak.js` were not executed in full.
 
 ## Test cases
-Every threshold of every scenario is a documented test case (ID as a comment next to the threshold), in the standard of [docs/TEST_CASE_STANDARD.md](docs/TEST_CASE_STANDARD.md) (strategy: not written yet for this repo).
+Every threshold of every scenario is a documented test case (ID as a comment next to the threshold), in the standard of [docs/TEST_CASE_STANDARD.md](docs/TEST_CASE_STANDARD.md) (strategy: [docs/TEST_STRATEGY.md](docs/TEST_STRATEGY.md)).
 
 | Module | Document | Cases |
 |--------|----------|-------|
